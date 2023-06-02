@@ -30,13 +30,13 @@ The conforming implementation of the specification is released and included in t
       * 2.1.3. [OpenAPI operation to Ballerina function mapping]()
         * 2.1.3.1 [Resource Function vs Remote Function]()
         * 2.1.3.2 [Parameters]()
-          * Path parameters
-          * Query Parameters
-          * Header parameters
-          * Cookie parameters
-          * Parameter serialization 
-          * Required parameters
-          * Optional parameters
+          * [Path parameters]()
+          * [Query Parameters]()
+          * [Header parameters]()
+          * [Cookie parameters]()
+          * [Parameter serialization]() 
+          * [Required parameters]()
+          * [Optional parameters]()
         * 2.1.3.3. [Request payload]() 
         * 2.1.3.4. [Return type]()
     * 2.2. [Ballerina Type Generation]() 
@@ -46,22 +46,22 @@ The conforming implementation of the specification is released and included in t
       * 2.2.4 [oneOf, anyOf, allOf, not]()
       * 2.2.5 [Enums]()
       * 2.2.6 [JSON schema keywords]()
-        * pattern
-        * nullable
+        * [pattern]()
+        * [nullable]()
     * 2.3. [Ballerina Service Generation]()
       * 2.3.1. [Listener]()
       * 2.3.2. [Service]() 
         * 2.3.2.1 [Resource function]()
         * 2.3.2.2 [Parameters]()
-          * Path parameters
-          * Query Parameters
-          * Header parameters
-          * Cookie parameters
-          * Required parameters
-          * Optional parameters
+          * [Path parameters]()
+          * [Query Parameters]()
+          * [Header parameters]()
+          * [Cookie parameters]()
+          * [Required parameters]()
+          * [Optional parameters]()
         * 2.1.3.3. [Request payload]() 
         * 2.1.3.4. [Return type]()
-3. OpenAPI to Ballerina
+3. [OpenAPI to Ballerina]()
 
 ## 1. Overview
 
