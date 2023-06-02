@@ -17,8 +17,51 @@ If you have any feedback or suggestions about the tool, start a discussion via a
 
 The conforming implementation of the specification is released and included in the distribution. Any deviation from the specification is considered a bug.
 
-## Contents
+<!-- ## Contents -->
 
+1. [Overview](#1-overview)
+2. [OpenAPI to Balerina]()
+    * 2.1. [Ballerina Client Generation]()
+      * 2.1.1. [Client Initialization]()
+      * 2.1.2. [Client Authentication]() 
+        * [HTTP Authentication Schemes]()
+        * [API Keys]()
+        * [OAuth2]()
+      * 2.1.3. [OpenAPI operation to Ballerina function mapping]()
+        * 2.1.3.1 [Resource Function vs Remote Function]()
+        * 2.1.3.2 [Parameters]()
+          * Path parameters
+          * Query Parameters
+          * Header parameters
+          * Cookie parameters
+          * Parameter serialization 
+          * Required parameters
+          * Optional parameters
+        * 2.1.3.3. [Request payload]() 
+        * 2.1.3.4. [Return type]()
+    * 2.2. [Ballerina Type Generation]() 
+      * 2.2.1 [Primitive types]()
+      * 2.2.2 [Arrays]()
+      * 2.2.3 [Object to Record mapping]()
+      * 2.2.4 [oneOf, anyOf, allOf, not]()
+      * 2.2.5 [Enums]()
+      * 2.2.6 [JSON schema keywords]()
+        * pattern
+        * nullable
+    * 2.3. [Ballerina Service Generation]()
+      * 2.3.1. [Listener]()
+      * 2.3.2. [Service]() 
+        * 2.3.2.1 [Resource function]()
+        * 2.3.2.2 [Parameters]()
+          * Path parameters
+          * Query Parameters
+          * Header parameters
+          * Cookie parameters
+          * Required parameters
+          * Optional parameters
+        * 2.1.3.3. [Request payload]() 
+        * 2.1.3.4. [Return type]()
+3. OpenAPI to Ballerina
 
 ## 1. Overview
 
@@ -73,11 +116,9 @@ Generates a Ballerina client from a given OpenAPI file. This include generating
 bal openapi -i <openapi-contract-path> --mode client [(-o|--output) output file path]
 ```
 
-#### 2.1.1. Generated Client Object
-
 By default the generated client name is “Client”. 
 
-##### Client Initialization
+#### 2.1.1. Client Initialization
 
 The client init method has following parameters
 
@@ -104,7 +145,7 @@ The client init method has following parameters
    - Currently tool does not provide the support for [overriding servers](https://swagger.io/docs/specification/api-host-and-base-path/#:~:text=%C2%A0%C2%A0%C2%A0%C2%A0%C2%A0%C2%A0%C2%A0%C2%A0%C2%A0%20%2D%20southeastasia-,Overriding%20Servers,-The%20global%20servers)
    - If there is no servers defined in the OpenAPI file, the parameter `serviceURL` is generated as a required parameter. Otherwise the `serviceURL` parameter is a defaultable parameter. 
   
-   2. Client Configuration (`ConnectionConfig config`)
+   1. Client Configuration (`ConnectionConfig config`)
    - `ConnectionConfig` record is based on the `http:ClientConfiguration`. The changes between the `http:ClientConfiguration` and `ConnectionConfig` is as below. 
      - The type of the `auth` record is changed according to the `securitySchemes` defined in the OpenAPI file. 
      - The `ClientHttp1Settings` record is generated within the connector initializing default values for each fields. 
