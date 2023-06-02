@@ -17,7 +17,7 @@ If you have any feedback or suggestions about the tool, start a discussion via a
 
 The conforming implementation of the specification is released and included in the distribution. Any deviation from the specification is considered a bug.
 
-<!-- ## Contents -->
+## Contents
 
 1. [Overview](#1-overview)
 2. [OpenAPI to Balerina]()
